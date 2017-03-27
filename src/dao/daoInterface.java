@@ -31,10 +31,9 @@ public interface daoInterface {
 	
 	public int insert_Apply(Apply apply);
 	public int update_Apply(Apply apply);
-	public Apply select_ApplyByBoardNo(int boardNo);
-	public Apply select_ApplyByUserIndex(int User_Index);
 	public List<Apply> selectAllApply_ByBoardNo(int boardNo);
-	public List<Apply> selectAllApply_ByUserIndex(int boardNo);
+	public List<Apply> selectAllApply_ByUserIndex(int User_Index);
+
 
 	public int insert_Score(Score score);
 	public int update_Score(Score score);
