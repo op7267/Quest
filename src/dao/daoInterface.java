@@ -38,13 +38,13 @@ public interface daoInterface {
 
 	public int insert_Score(Score score);
 	public int update_Score(Score score);
-	public Score select_ScoreByUser1Id(int user1_index);
-	public Score select_ScoreByUser2Id(int user2_index);
+//	public Score select_ScoreByUser1Id(int user1_index);
+//	public Score select_ScoreByUser2Id(int user2_index);
 	public Score select_ScoreByBoardNo(int boardNo);
 
 	public int insert_BookMark(Bookmark bookmark);
 	public int delete_BookMark(Bookmark bookmark);
-	public Bookmark select_BookMark(int boardNo, int user_index);
+	public Bookmark select_BookMark(Bookmark bookmark);
 
 	public int insert_Police(Police police);
 	public int select_Police(Police police);
