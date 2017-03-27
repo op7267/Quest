@@ -2,3 +2,14 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper>
+	<insert id="insert_Police">
+		insert into police values(#{boardNo}, #{user_index})
+	</insert>
+	
+	<select id="select_Police" parameterType="police" resultType="police"> 
+		select * from police where boardNo=#{boardNo} and user_id=#{user_index}
+	</select>
+
+</mapper>
