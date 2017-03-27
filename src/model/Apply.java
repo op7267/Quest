@@ -8,6 +8,7 @@ public class Apply {
 	private String content;
 	private String user_index;
 	private int a_complete_flag;
+	
 	public int getBoardNo() {
 		return boardNo;
 	}
@@ -46,8 +47,8 @@ public class Apply {
 	}
 	@Override
 	public String toString() {
-		return "Apply [boardNo=" + boardNo + ", rewardNo=" + rewardNo + ", contactAnswer=" + contactAnswer
-				+ ", content=" + content + ", user_index=" + user_index + ", a_complete_flag=" + a_complete_flag + "]";
+		return "Apply [boardNo:" + boardNo + ", rewardNo:" + rewardNo + ", contactAnswer:" + contactAnswer
+				+ ", content:" + content + ", user_index:" + user_index + ", a_complete_flag:" + a_complete_flag + "]";
 	}
 
 	
