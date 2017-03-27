@@ -8,6 +8,8 @@ public class User {
 	private String nickname;
 	private float star_point;
 	private int do_count;
+	
+	
 	public int getUser_index() {
 		return user_index;
 	}
