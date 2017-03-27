@@ -27,7 +27,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    </select>
    
    <select id="select_BoardAll" resultType="board">
-      select * from dept
+      select * from board
    </select>
 
 </mapper>
