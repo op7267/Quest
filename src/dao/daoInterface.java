@@ -1,4 +1,5 @@
 package dao;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.xml.stream.events.Comment;
@@ -23,11 +24,11 @@ public interface daoInterface {
 	public User select_User(int user_index);
 	
 
-	public int insert_Comment(Comment comment);
-	public int update_Comment(Comment comment);
-	public int delete_Comment(int boardNo);
-	public Comment select_CommentByBoardNo(int boardNo);
-	public List<Comment> selectAllComment_ByBoardNo(int boardNo);
+	public int insert_Comment(HashMap<String, Object> params);
+	public int update_Comment(HashMap<String, Object> params);
+	public int delete_Comment(HashMap<String, Object> params);
+//	public Comment select_CommentByBoardNo(int boardNo);
+	public List<Comment> selectAll_CommentByBoardNo(int boardNo);
 	
 	public int insert_Apply(Apply apply);
 	public int update_Apply(Apply apply);
@@ -35,11 +36,11 @@ public interface daoInterface {
 	public List<Apply> selectAllApply_ByUserIndex(int User_Index);
 
 
-	public int insert_Score(Score score);
-	public int update_Score(Score score);
+	public int insert_Score(HashMap<String, Object> params);
+	public int update_Score(HashMap<String, Object> params);
 //	public Score select_ScoreByUser1Id(int user1_index);
 //	public Score select_ScoreByUser2Id(int user2_index);
-	public Score select_ScoreByBoardNo(int boardNo);
+	public HashMap<String, Object> select_ScoreByBoardNo(int boardNo);
 
 	public int insert_BookMark(Bookmark bookmark);
 	public int delete_BookMark(Bookmark bookmark);

@@ -2,6 +2,23 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
-<mapper>
-
+<mapper namespace="dao.daoInterface">
+  <insert id="insert_Comment" parameterType="java.util.HashMap">
+  	INSERT INTO comment VALUES (#{boardNo}, #{user_index}, sysdate(), #{content})
+  </insert>
+  
+  <update id="update_Comment" parameterType="java.util.HashMap" >
+  	UPDATE comment SET content = #{content}, date = sysdate() WHERE 
+  	(boardNo = #{boardNo} and user_index = #{user_index})
+  </update>
+  
+  <delete id="delete_Comment" parameterType="java.util.HashMap">
+  	DELETE FROM comment WHERE boardNo = #{boardNo} and user_index = #{user_index}
+  </delete>
+  
+  <select id="selectAll_CommentByBoardNo" parameterType="int"
+   resultType="java.util.HashMap">
+   SELECT * FROM board WHERE boardNo = #{boardNo}
+   </select>
+   
 </mapper>
